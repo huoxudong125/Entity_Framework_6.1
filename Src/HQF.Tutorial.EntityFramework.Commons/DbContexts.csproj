@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mappings\UserMap.cs" />
+    <Compile Include="PartialUpdateDbContext.cs" />
+    <Compile Include="PartialUpdateDbContextInitializer.cs" />
     <Compile Include="SimpleDbContext.cs" />
     <Compile Include="SimpleDbContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,9 +60,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mappings\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Commons\Entities\Entities.csproj">
       <Project>{d1352a62-3165-4ddd-b17a-5977d82c898a}</Project>
