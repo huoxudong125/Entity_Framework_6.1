@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hierarchy", "Hierarchy", "{0CDA5624-5079-432F-9F51-425E92FF9C5E}"
 EndProject
@@ -47,6 +47,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{F0C5C4C0-3
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbLinqFunctions", "Src\Functions\DbLinqFunctions\DbLinqFunctions.csproj", "{FBB3D189-DBBD-4DEC-A129-9F6685E752EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F46024FD-4CCB-4AFC-B55A-34ACDD6D9303}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -120,5 +125,8 @@ Global
 		{A3B6140A-D6E3-40ED-8199-ED91F3191667} = {9B8253EB-FDA7-4C3B-97C8-C8F4D3387E9D}
 		{F5E3A736-975A-4E3C-82C1-98E164468860} = {4B493A43-670A-4F2D-ADF7-05A74B25F904}
 		{FBB3D189-DBBD-4DEC-A129-9F6685E752EB} = {B1533006-1D41-450B-B12E-5221A12580E2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2309A50-31F7-4DE8-9C3B-7DCB25178361}
 	EndGlobalSection
 EndGlobal

@@ -27,9 +27,16 @@ namespace HQF.Tutorial.EntityFramework.xUnitTest
         {
             using (var dbContext = new PartialUpdateDbContext())
             {
-              //部分更新
+                //https://dennymichael.net/2016/02/03/entity-framework-validation-with-partial-updates/
+                //https://stackoverflow.com/questions/12871892/entity-framework-validation-with-partial-updates/29689644#29689644
+
+                // disable the validation for this operation
+                // 通过重新实体验证方式来实现，移除对不修改属性的验证
+                //dbContext.Configuration.ValidateOnSaveEnabled = false;
+
+                //部分更新
                 var user = new User {UserId = 1,
-                    FirstName = "First Name Changed",
+                    //FirstName = "First Name Changed",
                     LastName = "Last Name Changed"};
 
                 dbContext.Set<User>().Attach(user);

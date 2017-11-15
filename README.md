@@ -5,3 +5,45 @@ Entity_Framework_6.1
 
 A data access layer class library implemented using Entity Framework 6.1 code first workflow.
  This class library is being developed for use as the data access component of the Prism 5.0 application, which has its own repository.
+
+
+
+ ## Partial Update properties using EntityFramework
+
+ https://stackoverflow.com/questions/12871892/entity-framework-validation-with-partial-updates/29689644#29689644
+
+ one way :
+
+ ```
+ using(var dbContext=new DbContext())
+ {
+	dbContext.Configuration.ValidateOnSaveEnabled = false
+ }
+
+ ```
+ another way:
+
+ ```
+ protected override DbEntityValidationResult ValidateEntity(
+  DbEntityEntry entityEntry,
+  IDictionary<object, object> items)
+{
+  var result = base.ValidateEntity(entityEntry, items);
+  var falseErrors = result.ValidationErrors
+    .Where(error =>
+    {
+      if (entityEntry.State != EntityState.Modified) return false;
+      var member = entityEntry.Member(error.PropertyName);
+      var property = member as DbPropertyEntry;
+      if (property != null)
+        return !property.IsModified;
+      else
+        return false;//not false err;
+    });
+
+  foreach (var error in falseErrors.ToArray())
+    result.ValidationErrors.Remove(error);
+  return result;
+}
+
+ ```
