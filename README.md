@@ -14,7 +14,7 @@ A data access layer class library implemented using Entity Framework 6.1 code fi
 
  one way :
 
- ```
+ ``` csharp
  using(var dbContext=new DbContext())
  {
 	dbContext.Configuration.ValidateOnSaveEnabled = false
@@ -23,7 +23,7 @@ A data access layer class library implemented using Entity Framework 6.1 code fi
  ```
  another way:
 
- ```
+ ``` csharp
  protected override DbEntityValidationResult ValidateEntity(
   DbEntityEntry entityEntry,
   IDictionary<object, object> items)
