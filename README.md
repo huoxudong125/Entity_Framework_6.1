@@ -47,3 +47,20 @@ A data access layer class library implemented using Entity Framework 6.1 code fi
 }
 
  ```
+ 
+ 
+ ## Third Resources 
+ [EntityFramework-Plus]( https://github.com/zzzprojects/EntityFramework-Plus)  
+- Auditing
+
+- Batch Delete
+- Batch Update
+
+- LINQ Dynamic
+
+- Query Cache
+- Query Deferred
+- Query Filter
+- Query Future
+- Query IncludeFilter
+- Query IncludeOptimized
